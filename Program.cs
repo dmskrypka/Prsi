@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Prsi.Mapping;
 
 namespace Prsi
 {
@@ -15,10 +12,11 @@ namespace Prsi
         [STAThread]
         static void Main()
         {
+            Logger.InitLogger();
+            MappingProfilesConfig.RegisterMapping();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Enter_name());
-            //Application.Run(new Choose_suit());
         }
 
 

@@ -52,3 +52,18 @@ E:\Google Drive\Studium_VSFS\4. semestr\PrW_1&2\zdrojaky_leto\Prsi_v4(skoro fung
 E:\Google Drive\Studium_VSFS\4. semestr\PrW_1&2\zdrojaky_leto\Prsi_v4(skoro funguje)\Prsi\obj\Debug\Prsi.csproj.CoreCompileInputs.cache
 E:\Google Drive\Studium_VSFS\4. semestr\PrW_1&2\zdrojaky_leto\Prsi_v4(skoro funguje)\Prsi\obj\Debug\Prsi.exe
 E:\Google Drive\Studium_VSFS\4. semestr\PrW_1&2\zdrojaky_leto\Prsi_v4(skoro funguje)\Prsi\obj\Debug\Prsi.pdb
+E:\Google Drive\Now_wr_prg\Prsi\bin\Debug\Prsi.exe.config
+E:\Google Drive\Now_wr_prg\Prsi\bin\Debug\Prsi.exe
+E:\Google Drive\Now_wr_prg\Prsi\bin\Debug\Prsi.pdb
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.csprojResolveAssemblyReference.cache
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.g.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.Choose_suit.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.End_Form.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.Enter_name.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.Form1.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.Log_Form.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.Properties.Resources.resources
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.csproj.GenerateResource.Cache
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.csproj.CoreCompileInputs.cache
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.exe
+E:\Google Drive\Now_wr_prg\Prsi\obj\Debug\Prsi.pdb

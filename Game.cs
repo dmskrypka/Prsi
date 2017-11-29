@@ -9,7 +9,7 @@ using Prsi.Properties;
 
 namespace Prsi
 {
-    class Game : GameInfo
+    class Game
     {
         public Deck MixedCards = new Deck();
         public Deck UsedCards = new Deck();
