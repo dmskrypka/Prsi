@@ -1,0 +1,30 @@
+\t\t\t1. Role of cards in game:\n\r
+For everyone suits of card:
+* "Ace" - next player skip one move;
+* "Six" - nothing;
+* "Seven" - next player take one card from playing deck;
+* "Eight" - next player take two cards from playing deck and skip move;
+* "Nine" - nothing;
+* "Ten" - nothing;
+* "Jack" - current player ask for next playing suit;
+* "Queen" - (suit another then spider) nothing;
+* "King" - (suit another then heart) nothing;
+For one suit:
+* "Queen of spider" - next player take five cards from playing deck and skip move;
+* "King of heart" - next player take three cards from playing deck;\n\n\r
+\t\t\t2. Value of cards (points):\n\r
+* "Ace" = 15;
+* "Six", "Seven", "Eight" and "Nine" = 0;
+* "Ten" = 10;
+* "Jack" = 20;
+* "Queen" = 10 (suit another then spider);
+* "Queen of spider" = 50;
+* "King" = 10 (suit another then heart);
+* "King of heart" = 30;\n\n\r
+\t\t\t3. Playing proces:\n\r
+\tPlayers make moves one by one while at least one of the players will not run out of cards. 
+\bPlayers can game over if was played 4 same cards in sequence. 
+\bIn this situation must be pressed button "Bridge".
+\tAfter game's end players count there points of cards. 
+\bLosing player will be that who have more then 125 points. 
+\bIf sum of points is lower for both players they start next game.  
