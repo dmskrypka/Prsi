@@ -12,8 +12,16 @@ namespace Prsi.Service.API
         // TODO: set new class of card
         object CardMove(PlayerType pType, object card);
 
-        List<object> GameProcessLog { get; }
+        List<IGameEventInfo> GameProcessLog { get; }
 
-        void AddEventToGameProcessLog(object itm);
+        void AddEventToGameProcessLog();
+    }
+
+    interface IGameEventInfo
+    {
+        string PlayerName { get; }
+        string cardName { get; }
+        DateTime TimeOfEvent { get; }
+        int GamePointsState { get; }
     }
 }

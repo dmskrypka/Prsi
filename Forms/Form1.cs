@@ -202,7 +202,7 @@ namespace Prsi.Forms
         /// <param name="g">New or previous game information</param>
         public void StartG(Game g)
         {
-            Deck NewD = new Deck();
+            DeckImpl NewD = new DeckImpl();
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel2.Controls.Clear();
             PlayCards.Controls.Clear();

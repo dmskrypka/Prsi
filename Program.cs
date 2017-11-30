@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Prsi.Mapping;
 
 namespace Prsi
 {
@@ -13,14 +12,9 @@ namespace Prsi
         static void Main()
         {
             Logger.InitLogger();
-            MappingProfilesConfig.RegisterMapping();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Enter_name());
         }
-
-
     }
-
-    
 }

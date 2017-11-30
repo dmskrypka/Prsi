@@ -5,14 +5,35 @@ using System.Text;
 using System.Threading.Tasks;
 using Prsi.Service.API;
 
+
 namespace Prsi.Service.Impl
 {
     class GameProcessImpl : IGameProcess
     {
-        public List<object> GameProcessLog { get; }
+        IGameConfig gameConfig;
+        public List<IGameEventInfo> GameProcessLog { get; set; }
 
-        public void AddEventToGameProcessLog(object itm)
+        public GameProcessImpl()
         {
+            gameConfig = new GameConfigImpl();
+        }
+
+        public void AddEventToGameProcessLog()
+        {
+            this.GameProcessLog.Add(new GameEventInfoImpl(this));
+        }
+    }
+
+    class GameEventInfoImpl : IGameEventInfo
+    {
+        public string PlayerName { get; set; }
+        public string cardName { get; set; }
+        public DateTime TimeOfEvent { get; set; }
+        public int GamePointsState { get; set; }
+
+        public GameEventInfoImpl(IGameProcess currentGameProcess)
+        {
+            
 
         }
     }

@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>packages\Unity.5.3.1\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
@@ -88,7 +85,6 @@
     <Compile Include="Forms\Choose_suit.Designer.cs">
       <DependentUpon>Choose_suit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Deck.cs" />
     <Compile Include="Forms\End_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,7 +110,6 @@
     <Compile Include="Forms\Log_Form.Designer.cs">
       <DependentUpon>Log_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mapping\MappingProfilesConfig.cs" />
     <Compile Include="Objects\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,7 +117,7 @@
     <Compile Include="Service\API\IGameProcess.cs" />
     <Compile Include="Service\Impl\GameConfigImpl.cs" />
     <Compile Include="Service\Impl\GameProcessImpl.cs" />
-    <Compile Include="Service\Impl\GenerateNewDeck.cs" />
+    <Compile Include="Objects\Deck.cs" />
     <EmbeddedResource Include="Forms\Choose_suit.resx">
       <DependentUpon>Choose_suit.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,9 +205,7 @@
     <Content Include="Resources\Qh.png" />
     <Content Include="Resources\Qs.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mapping\MapperProfiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

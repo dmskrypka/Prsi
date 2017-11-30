@@ -1,7 +1,11 @@
 ﻿using System;
 using Unity;
 using Unity.Lifetime;
-
+using Prsi.Service.API;
+using Prsi.Service.Impl;
+using Prsi.Controller.API;
+using Prsi.Controller.Impl;
+using Prsi.Objects;
 
 namespace Prsi
 {
@@ -14,13 +18,15 @@ namespace Prsi
         {
             IUnityContainer container = new UnityContainer();
 
-            ConfigCoreServiceImpl config = new ConfigCoreServiceImpl();
+            GameConfigImpl config = new GameConfigImpl();
 
-            container.RegisterInstance<IConfigurationCoreService>(config, new ContainerControlledLifetimeManager());
+            container.RegisterInstance<IGameConfig>(config, new ContainerControlledLifetimeManager());
 
-            container.RegisterType<MainController, ControllerImpl>(new ContainerControlledLifetimeManager());
-            container.RegisterType<IDbMessageManager, DbMessageManagerImpl>(new ContainerControlledLifetimeManager());
-            container.RegisterType<ISmsServer, SmsServerImpl>(new ContainerControlledLifetimeManager());
+            container.RegisterType<MainController, MainControllerImpl>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IGameProcess, GameProcessImpl>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IGameEventInfo, GameEventInfoImpl>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IPlayer, PlayerImpl>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IDeck, DeckImpl>(new ContainerControlledLifetimeManager());
 
             return container;
         }

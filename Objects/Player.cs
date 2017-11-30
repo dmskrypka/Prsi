@@ -1,101 +1,64 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Prsi.Objects
 {
+    interface IPlayer
+    {
+        string Name { get; }
+        PlayerType Type { get; }
+        int GamePoints { get; set; }
+        List<ICard> PlayersDeck { get; }
+
+        int GetPlayerCardsValue();
+        void AddCardToPlayersDeck(ICard card);
+        void DeleteCardFromPlayersDeck(ICard card);
+    }
+
     public enum PlayerType
     {
-        PlayerOne,
-        PlayerTwo,
+        Player,
         PC
     }
 
-    class Player
+    class PlayerImpl : IPlayer
     {
-        string name;
-        PlayerType pType;
-        int points;
-        int NumCards;
+        public string Name { get; set; }
+        public PlayerType Type { get; set; }
+        public int GamePoints { get; set; }
+        public List<ICard> PlayersDeck { get; set; }
 
-        public bool PlMove=false;
-        public object[] PlayerDeck = new object[36];
-
-        public void SetNew(string name)
+        public PlayerImpl(string _name)
         {
-            this.name = name;
-            this.points = 0;
-            this.NumCards = 0;
+            this.Name = _name;
+            this.Type = PlayerType.Player;
+            this.GamePoints = 0;
+            this.PlayersDeck = new List<ICard>();
         }
 
-        public void ChangePoints(int val)
+        public PlayerImpl()
         {
-            this.points += val;
+            this.Name = "PC";
+            this.Type = PlayerType.PC;
+            this.GamePoints = 0;
+            this.PlayersDeck = new List<ICard>();
         }
 
-        public int ShowPlayerPoints()
-        {
-            return this.points;
-        }
-
-        public int GetCardsValue()
+        public int GetPlayerCardsValue()
         {
             int res = 0;
-            if (this.NumCards > 0)
-            {
-                Card c;
-                for(int i=0;i< this.NumCards; i++)
-                {
-                    c = (Card)this.PlayerDeck[i];
-                    res+=c.GetCardValue();
-                }
-            }
+            foreach(ICard card in PlayersDeck)
+                res += card.Value;
             return res;
         }
 
-        public Card[] ReturnArray()
+        public void AddCardToPlayersDeck(ICard card)
         {
-            Card[] arr = new Card[this.NumCards];
-            for(int i = 0; i < this.NumCards; i++)
-                arr[i] = (Card)this.PlayerDeck[i];
-            return arr;
+            this.PlayersDeck.Add(card);
         }
 
-        public void TakeCard(object Card)
+        public void DeleteCardFromPlayersDeck(ICard card)
         {
-            this.PlayerDeck[NumCards] = Card;
-            this.NumCards++;
-        }
-
-        public int NumberOfCards()
-        {
-            return NumCards;
-        }
-
-        public Card GetLastCard()
-        {
-            return (Card)this.PlayerDeck[this.NumCards-1];
-        }
-
-        public void DeleteCard(object card)
-        {
-            for(int i = 0; i < this.PlayerDeck.Length; i++)
-            {
-                if (this.PlayerDeck[i] == card)
-                {
-                    this.PlayerDeck[i] = null;
-                    while (this.PlayerDeck[i + 1] != null)
-                    {
-                        this.PlayerDeck[i] = this.PlayerDeck[i + 1];
-                        this.PlayerDeck[i+1] = null;
-                        i++;
-                    }
-                    break;
-                }
-            }
-            this.NumCards--;
+            this.PlayersDeck.Remove(card);
         }
     }
 }
